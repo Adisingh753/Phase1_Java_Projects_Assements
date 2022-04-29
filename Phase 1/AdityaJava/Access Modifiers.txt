@@ -1,0 +1,103 @@
+* Write a program to demonstrate how and when access modifiers are used.
+
+#  Example of Private access modifier:
+
+class A{  
+private int data=40;  
+private void msg(){System.out.println("Hello java");}  
+}  
+  
+public class Simple{  
+ public static void main(String args[]){  
+   A obj=new A();  
+   System.out.println(obj.data);//Compile Time Error  
+   obj.msg();//Compile Time Error  
+   }  
+}  
+
+
+# If you make any class constructor private, you cannot create the instance of
+ that class from outside the class. 
+
+-For example:
+class A{  
+private A(){}//private constructor  
+void msg(){System.out.println("Hello java");}  
+}  
+public class Simple{  
+ public static void main(String args[]){  
+   A obj=new A();//Compile Time Error  
+ }  
+}  
+
+
+#Example of default access modifier:
+
+/save by A.java  
+package pack;  
+class A{  
+  void msg(){System.out.println("Hello");}  
+}  
+//save by B.java  
+package mypack;  
+import pack.*;  
+class B{  
+  public static void main(String args[]){  
+   A obj = new A();//Compile Time Error  
+   obj.msg();//Compile Time Error  
+  }  
+}
+
+
+#Example of protected access modifier:
+
+class A{  
+protected void msg(){System.out.println("Hello java");}  
+}  
+  
+public class Simple extends A{  
+void msg(){System.out.println("Hello java");}//C.T.Error  
+ public static void main(String args[]){  
+   Simple obj=new Simple();  
+   obj.msg();  
+   }  
+}  
+
+#Example of public access modifier:
+
+//save by A.java  
+  
+package pack;  
+public class A{  
+public void msg(){System.out.println("Hello");}  
+}  
+//save by B.java  
+  
+package mypack;  
+import pack.*;  
+  
+class B{  
+  public static void main(String args[]){  
+   A obj = new A();  
+   obj.msg();  
+  }  
+}  
+
+
+#Java Access Modifiers with Method Overriding:
+
+class A{  
+protected void msg(){System.out.println("Hello java");}  
+}  
+  
+public class Simple extends A{  
+void msg(){System.out.println("Hello java");}//C.T.Error  
+ public static void main(String args[]){  
+   Simple obj=new Simple();  
+   obj.msg();  
+   }  
+
+
+
+
+

@@ -1,0 +1,138 @@
+* Write a program to demonstrate the uses of map.
+
+# Example of Map:
+
+// Java Program to Demonstrate
+// Working of Map interface
+
+// Importing required classes
+
+import java.util.*;
+
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String args[])
+	{
+		// Creating an empty HashMap
+		Map<String, Integer> hm
+			= new HashMap<String, Integer>();
+
+		// Inserting pairs in above Map
+		// using put() method
+		hm.put("a", new Integer(100));
+		hm.put("b", new Integer(200));
+		hm.put("c", new Integer(300));
+		hm.put("d", new Integer(400));
+
+		// Traversing through Map using for-each loop
+		for (Map.Entry<String, Integer> me :
+			hm.entrySet()) {
+
+			// Printing keys
+			System.out.print(me.getKey() + ":");
+			System.out.println(me.getValue());
+		}
+	}
+}
+
+# Example of Hash Map:
+
+// Java Program to illustrate the Hashmap Class
+
+// Importing required classes
+import java.util.*;
+
+// Main class
+public class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Creating an empty HashMap
+		Map<String, Integer> map = new HashMap<>();
+
+		// Inserting entries in the Map
+		// using put() method
+		map.put("vishal", 10);
+		map.put("sachin", 30);
+		map.put("vaibhav", 20);
+
+		// Iterating over Map
+		for (Map.Entry<String, Integer> e : map.entrySet())
+
+			// Printing key-value pairs
+			System.out.println(e.getKey() + " "
+							+ e.getValue());
+	}
+}
+
+
+# Example of Linked Hash Map:
+
+// Java Program to Illustrate the LinkedHashmap Class
+
+// Importing required classes
+import java.util.*;
+
+// Main class
+public class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Creating an empty LinkedHashMap
+		Map<String, Integer> map = new LinkedHashMap<>();
+
+		// Inserting pair entries in above Map
+		// using put() method
+		map.put("vishal", 10);
+		map.put("sachin", 30);
+		map.put("vaibhav", 20);
+
+		// Iterating over Map
+		for (Map.Entry<String, Integer> e : map.entrySet())
+
+			// Printing ket-value pairs
+			System.out.println(e.getKey() + " "
+							+ e.getValue());
+	}
+}
+
+
+# Example of Tree Map:
+
+// Java Program to Illustrate TreeMap Class
+
+// Importing required classes
+import java.util.*;
+
+// Main class
+public class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Creating an empty TreeMap
+		Map<String, Integer> map = new TreeMap<>();
+
+		// Inserting custom elements in the Map
+		// using put() method
+		map.put("vishal", 10);
+		map.put("sachin", 30);
+		map.put("vaibhav", 20);
+
+		// Iterating over Map using for each loop
+		for (Map.Entry<String, Integer> e : map.entrySet())
+
+			// Printing key-value pairs
+			System.out.println(e.getKey() + " "
+							+ e.getValue());
+	}
+}
+
+

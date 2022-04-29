@@ -1,0 +1,146 @@
+* You are given a project to demonstrate the uses of classes,objects,object oriented pilliars in java.
+
+# Example of Inheritance:
+
+class Employee{  
+ float salary=40000;  
+}  
+class Programmer extends Employee{  
+ int bonus=10000;  
+ public static void main(String args[]){  
+   Programmer p=new Programmer();  
+   System.out.println("Programmer salary is:"+p.salary);  
+   System.out.println("Bonus of Programmer is:"+p.bonus);  
+}  
+}  
+
+ Programmer salary is:40000.0
+ Bonus of programmer is:10000
+
+
+#Example of Abstraction:
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+ 
+ Output:
+The pig says: wee wee
+Zzz
+
+
+# Example of Encaspulation:
+
+//A Account class which is a fully encapsulated class.  
+//It has a private data member and getter and setter methods.  
+class Account {  
+//private data members  
+private long acc_no;  
+private String name,email;  
+private float amount;  
+//public getter and setter methods  
+public long getAcc_no() {  
+    return acc_no;  
+}  
+public void setAcc_no(long acc_no) {  
+    this.acc_no = acc_no;  
+}  
+public String getName() {  
+    return name;  
+}  
+public void setName(String name) {  
+    this.name = name;  
+}  
+public String getEmail() {  
+    return email;  
+}  
+public void setEmail(String email) {  
+    this.email = email;  
+}  
+public float getAmount() {  
+    return amount;  
+}  
+public void setAmount(float amount) {  
+    this.amount = amount;  
+}  
+  
+}  
+}  
+
+//A Java class to test the encapsulated class Account.  
+public class TestEncapsulation {  
+public static void main(String[] args) {  
+    //creating instance of Account class  
+    Account acc=new Account();  
+    //setting values through setter methods  
+    acc.setAcc_no(7560504000L);  
+    acc.setName("Sonoo Jaiswal");  
+    acc.setEmail("sonoojaiswal@javatpoint.com");  
+    acc.setAmount(500000f);  
+    //getting values through getter methods  
+    System.out.println(acc.getAcc_no()+" "+acc.getName()+" "+acc.getEmail()+" "+acc.getAmount());  
+}  
+}  
+
+Output:
+
+7560504000 Sonoo Jaiswal sonoojaiswal@javatpoint.com 500000.0
+
+
+#  Example Of Polymorphisms: 
+
+class Shape{  
+void draw(){System.out.println("drawing...");}  
+}  
+class Rectangle extends Shape{  
+void draw(){System.out.println("drawing rectangle...");}  
+}  
+class Circle extends Shape{  
+void draw(){System.out.println("drawing circle...");}  
+}  
+class Triangle extends Shape{  
+void draw(){System.out.println("drawing triangle...");}  
+}  
+class TestPolymorphism2{  
+public static void main(String args[]){  
+Shape s;  
+s=new Rectangle();  
+s.draw();  
+s=new Circle();  
+s.draw();  
+s=new Triangle();  
+s.draw();  
+}  
+}  
+
+Output:
+
+drawing rectangle...
+drawing circle...
+drawing triangle..
+
+
+
+

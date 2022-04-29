@@ -1,0 +1,38 @@
+* As a developer ,you are askedto fix the bugs of the application using appropriate algorithm.
+
+1. NEW –
+
+When any new defect is identified by tester, it falls in ‘New’ state. It is first state of Bug Life Cycle. The tester provides a proper Defect document to Development team so that development team can refer to Defect Document and can fix bug accordingly.
+
+2. ASSIGNED –
+
+Defects which are in status of ‘New’ will be approved and that newly identified defect is assigned to the development team for working on defect and to resolve that. When the defect is assigned to developer team then status of bug changes to ‘Assigned’ state.
+
+3. OPEN –
+
+In this ‘Open’ state the defect is being addressed by developer team and developer team works on the defect for fixing the bug. Based on some specific reason if developer team feels that defect is not appropriate then it is transferred to either ‘Rejected’ or ‘Deferred’ state.
+
+4. FIXED –
+
+After necessary changes of codes or after fixing identified bug developer team marks state as ‘Fixed’.
+
+5. PENDING RETEST –
+
+During the fixing of defect is completed, developer team passes new code to testing team for retest. And the code/application is pending for retesting at Tester side so status is assigned as ‘Pending Retest’.
+
+6. RETEST –
+
+At this stage, tester starts work of retesting defect to check whether defect is fixed by developer or not, and the status is marked as ‘Retesting’.
+
+7. REOPEN –
+
+After ‘Retesting’ if tester team found that bug continues like previously even after developer team has fixed the bug, then status of bug is again changed to ‘Reopened’. Once again bug goes to ‘Open’ state and goes through life cycle again. This means it goes for Re-fixing by the developer team.
+
+8. VERIFIED –
+
+The tester re-tests bug after it got fixed by developer team and if tester does not find any kind of defect/bug then bug is fixed and status assigned is ‘Verified’.
+
+9. CLOSED –
+
+It is the final state of Defect Cycle, after fixing defect by developer team when testing found that the bug has been resolved and it does not persist then they mark defect as a ‘Closed’ state.
+

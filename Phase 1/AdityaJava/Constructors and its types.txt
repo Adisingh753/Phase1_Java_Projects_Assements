@@ -1,0 +1,97 @@
+* Write a program to demonstrate the uses of constructors and its types.
+
+# Example of Constructors:
+
+class Main {
+  private String name;
+
+  // constructor
+  Main() {
+    System.out.println("Constructor Called:");
+    name = "Programiz";
+  }
+
+  public static void main(String[] args) {
+
+    // constructor is invoked while
+    // creating an object of the Main class
+    Main obj = new Main();
+    System.out.println("The name is " + obj.name);
+  }
+}
+
+
+# Example of Default Constructors:
+
+//Let us see another example of default constructor  
+//which displays the default values
+  
+class Student3{  
+int id;  
+String name;  
+//method to display the value of id and name  
+void display(){System.out.println(id+" "+name);}  
+  
+public static void main(String args[]){  
+//creating objects  
+Student3 s1=new Student3();  
+Student3 s2=new Student3();  
+//displaying values of the object  
+s1.display();  
+s2.display();  
+}  
+}  
+
+#Example of parameterized constructor:
+  
+class Student4{  
+    int id;  
+    String name;  
+    //creating a parameterized constructor  
+    Student4(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    //method to display the values  
+    void display(){System.out.println(id+" "+name);}  
+   
+    public static void main(String args[]){  
+    //creating objects and passing values  
+    Student4 s1 = new Student4(111,"Karan");  
+    Student4 s2 = new Student4(222,"Aryan");  
+    //calling method to display the values of object  
+    s1.display();  
+    s2.display();  
+   }  
+}
+
+  
+#Example of Constructor Overloading:
+
+//Java program to overload constructors  
+class Student5{  
+    int id;  
+    String name;  
+    int age;  
+    //creating two arg constructor  
+    Student5(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    //creating three arg constructor  
+    Student5(int i,String n,int a){  
+    id = i;  
+    name = n;  
+    age=a;  
+    }  
+    void display(){System.out.println(id+" "+name+" "+age);}  
+   
+    public static void main(String args[]){  
+    Student5 s1 = new Student5(111,"Karan");  
+    Student5 s2 = new Student5(222,"Aryan",25);  
+    s1.display();  
+    s2.display();  
+   }  
+}  
+
+

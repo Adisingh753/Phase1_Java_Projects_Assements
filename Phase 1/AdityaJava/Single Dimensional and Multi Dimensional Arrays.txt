@@ -1,0 +1,74 @@
+* Write a program to create single-dimensional and multidimensional arrays:
+
+# Example of Multidimensional array:
+
+class MultidimensionalArray {
+    public static void main(String[] args) {
+
+        // create a 2d array
+        int[][] a = {
+            {1, -2, 3}, 
+            {-4, -5, 6, 9}, 
+            {7}, 
+        };
+      
+        // first for...each loop access the individual array
+        // inside the 2d array
+        for (int[] innerArray: a) {
+            // second for...each loop access each element inside the row
+            for(int data: innerArray) {
+                System.out.println(data);
+            }
+        }
+    }
+}
+
+
+# Example of Single-dimensional array:
+
+package arraysProgram;
+import java.util.Scanner;
+public class OneDArr {
+public static void main(String[] args) 
+{
+// Create an object of Scanner class to take input from the keyboard.
+    Scanner sc = new Scanner(System.in);	
+   
+// Ask in how many subjects have you given exams.
+    System.out.println("In how many subject have you given exams?");
+    int n = sc.nextInt();
+   
+// Create one-dimensional array with size n.
+    int[ ] marks = new int[n];
+   
+    System.out.println("Enter your marks obtained in subjects:"); 
+// Store elements into the array using for loop.
+   for(int i = 0; i < n; i++) {
+	marks[i] = sc.nextInt();
+   }
+// Find the total marks obtained in subjects.
+   int total = 0;
+   for(int i = 0; i < n; i++) {
+	 total += marks[i]; // Or, total = total + marks[i]. 
+   }
+// Display the total marks on the console.
+     System.out.println("Total marks: " +total);
+// Find the percentage.
+     float percentage = (float)total/n; // Casting.
+     System.out.println("Percentage: " +percentage+ "%");
+ }
+}
+Output:
+          In how many subject have you given exams?
+           5
+         Enter your marks obtained in subjects:
+          89
+          99
+          95
+          96
+          98
+        Total marks: 477
+        Percentage: 95.4%
+
+
+ 

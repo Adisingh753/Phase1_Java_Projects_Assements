@@ -1,0 +1,8 @@
+Employee {
+
+int id;
+String name;
+String dept
+String address
+float salary
+String project_name

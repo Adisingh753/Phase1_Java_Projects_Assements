@@ -1,0 +1,176 @@
+* Write a program to demonstrate the working of inner classes.
+
+1.Java Program to Demonstrate Nested class:
+
+// Class 1
+// Helper classes
+class Outer {
+
+	// Class 2
+	// Simple nested inner class
+	class Inner {
+
+		// show() method of inner class
+		public void show()
+		{
+
+			// Print statement
+			System.out.println("In a nested class method");
+		}
+	}
+}
+
+// Class 2
+// Main class
+class Main {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Note how inner class object is created inside
+		// main()
+		Outer.Inner in = new Outer().new Inner();
+
+		// Calling show() method over above object created
+		in.show();
+	}
+}
+
+
+2.Java Program to Demonstrate Nested class:
+
+// Where Error is thrown
+
+// Class 1
+// Outer class
+class Outer {
+
+	// Method defined inside outer class
+	void outerMethod()
+	{
+
+		// Print statement
+		System.out.println("inside outerMethod");
+	}
+
+	// Class 2
+	// Inner class
+	class Inner {
+
+		// Main driver method
+		public static void main(String[] args)
+		{
+
+			// Display message for better readability
+			System.out.println("inside inner class Method");
+		}
+	}
+}
+
+# Java Program to Illustrate Inner class can be:
+
+// declared within a method of outer class
+
+// Class 1
+// Outer class
+class Outer {
+
+	// Method inside outer class
+	void outerMethod()
+	{
+
+		// Print statement
+		System.out.println("inside outerMethod");
+
+		// Class 2
+		// Inner class
+		// It is local to outerMethod()
+		class Inner {
+
+			// Method defined inside inner class
+			void innerMethod()
+			{
+
+				// Print statement whenever inner class is
+				// called
+				System.out.println("inside innerMethod");
+			}
+		}
+
+		// Creating object of inner class
+		Inner y = new Inner();
+
+		// Calling over method defined inside it
+		y.innerMethod();
+	}
+}
+
+// Class 3
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Creating object of outer class inside main()
+		// method
+		Outer x = new Outer();
+
+		// Calling over the same method
+		// as we did for inner class above
+		x.outerMethod();
+	}
+}
+ 
+
+
+3.Java Program to Illustrate Static Nested Classes:
+
+// Importing required classes
+import java.util.*;
+
+// Class 1
+// Outer class
+class Outer {
+
+	// Method
+	private static void outerMethod()
+	{
+
+		// Print statement
+		System.out.println("inside outerMethod");
+	}
+
+	// Class 2
+	// Static inner class
+	static class Inner {
+
+		public static void display()
+		{
+
+			// Print statement
+			System.out.println("inside inner class Method");
+
+			// Calling method inside main() method
+			outerMethod();
+		}
+	}
+}
+
+// Class 3
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String args[])
+	{
+
+		Outer.Inner obj = new Outer.Inner();
+
+		// Calling method via above instance created
+		obj.display();
+	}
+}
+

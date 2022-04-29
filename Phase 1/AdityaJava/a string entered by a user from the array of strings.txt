@@ -1,0 +1,143 @@
+ * write a program to search  a string entered by a user from the array of strings.
+
+# Java Program to add elements in a pre-allocated Array:
+  
+import java.util.Arrays;  
+public class StringArrayDemo {  
+        public static void main(String[] args) {  
+            String[] sa = new String[7]; // Creating a new Array of Size 7  
+            sa[0] = "A"; // Adding Array elements  
+            sa[1] = "B";  
+            sa[2] = "C";  
+            sa[3] = "D";  
+            sa[4] = "E";  
+            System.out.println("Original Array Elements:" + Arrays.toString(sa));  
+            int numberOfItems = 5;  
+            String newItem = "F"; // Expanding Array Elements Later  
+            String newItem2 ="G";  
+            sa[numberOfItems++] = newItem;  
+            sa[numberOfItems++] = newItem2;  
+            System.out.println("Array after adding two elements:" +    
+                      Arrays.toString(sa));  
+        }  
+    }  
+Output:
+
+Original Array Elements:[A, B, C, D, E, null, null]
+Array after adding two elements:[A, B, C, D, E, F, G]
+
+From the above example, we have added two elements in a pre-allocated Array.
+
+
+#Using ArrayList:
+
+import java.util.ArrayList;  
+import java.util.Arrays;  
+import java.util.List;  
+  
+public class StringArrayDemo1 {   
+        public static void main(String[] args)   
+        {   
+              // Defining a String Array   
+              String sa[] = { "A", "B", "C", "D", "E", "F" };  
+          //   
+            System.out.println("Initial Array:\n"  
+                               + Arrays.toString(sa));   
+            String ne = "G"; // Define new element to add  
+            List<String>l = new ArrayList<String>(  
+                      Arrays.asList(sa)); // Convert Array to ArrayList  
+            l.add(ne); // Add new element in ArrayList l  
+            sa = l.toArray(sa); // Revert Conversion from ArrayList to Array  
+            // printing the new Array  
+            System.out.println("Array with added Value: \n"  
+                               + Arrays.toString(sa)) ;   
+        }   
+    }  
+
+-Output:
+
+Initial Array:
+[A, B, C, D, E, F]
+Array with added value: 
+[A, B, C, D, E, F, G]
+
+
+# Java Program to add elements in a String Array by creating a new Array  
+import java.util.Arrays;  
+public class StringArrayDemo2 {  
+        public static void main(String[] args) {  
+            //Declaring Initial Array  
+            String[] sa = {"A", "B", "C" };    
+            // Printing the Original Array  
+            System.out.println("Initial Array: " + Arrays.toString(sa));  
+                int length_Var = sa.length; //Defining the array length variable  
+            String newElement = "D"; // Defining new element to add  
+            //define new array with extended length           
+            String[] newArray = new String[ length_Var + 1 ];  
+            //Adding all the elements to initial Array  
+            for (int i=0; i <sa.length; i++)  
+            {  
+                newArray[i] = sa [i];  
+             }  
+            //Specifying the position of the added elements ( Last)  
+            newArray[newArray.length- 1] = newElement;  
+            //make it original and print  
+            sa = newArray;     
+            System.out.println("updated Array: " + Arrays.toString(sa));  
+        }  
+    }
+  
+-Output:
+
+Initial Array: [A, B, C]
+updated Array: [A, B, C, D]
+
+
+# Searching in String Array
+
+public class StringArrayExample {  
+        public static void main(String[] args) {  
+            String[] strArray = { "Ani", "Sam", "Joe" };  
+            boolean x = false; //initializing x to false  
+            int in = 0; //declaration of index variable  
+            String s = "Sam";  // String to be searched
+   for (int i = 0; i < strArray.length; i++) {  
+                if(s.equals(strArray[i])) {  
+                    in = i; x = true; break;  
+                }  
+            }  
+            if(x)  
+                System.out.println(s +" String is found at index "+in);  
+            else  
+                System.out.println(s +" String is not found in the array");  
+        }  
+}  
+            // Iteration of the String Array 
+
+-Output:Sam String is found at index 1
+
+
+# Sorting in String Array
+
+ //Java Program to sort elements in a String Array
+  
+import java.util.Arrays;  
+public class StringArraySorting {  
+       public static void main(String[] args)   
+        {   
+           // Adding String values  
+           String[] colors = {"Cricket","Basketball","Football","Badminton","Tennis"};  
+           // Print Original values   
+           System.out.println("Entered Sports: "+Arrays.toString(colors));  
+            Arrays.sort(colors); // Sorting Elements  
+           // Print Sorted Values  
+            System.out.println("Sorted Sports: "+Arrays.toString(colors));  
+        }  
+    }
+  
+-Output:
+
+ Entered Sports: [Cricket, Basketball, Football, Badminton, Tennis]
+Sorted Sports: [Badminton, Basketball, Cricket, Football, Tennis]
+    
+

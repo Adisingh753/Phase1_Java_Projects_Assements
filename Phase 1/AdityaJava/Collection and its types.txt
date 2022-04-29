@@ -1,0 +1,86 @@
+* Write a program to demonstrate the uses of collections and its types.
+
+-  Example of ArrayList:
+
+// The Collections framework is defined in the java.util package
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args){
+        ArrayList<String> animals = new ArrayList<>();
+        // Add elements
+        animals.add("Dog");
+        animals.add("Cat");
+        animals.add("Horse");
+
+        System.out.println("ArrayList: " + animals);
+    }
+}
+
+# Example of LinkedList:
+
+import java.util.*;  
+public class TestJavaCollection2{  
+public static void main(String args[]){  
+LinkedList<String> al=new LinkedList<String>();  
+al.add("Ravi");  
+al.add("Vijay");  
+al.add("Ravi");  
+al.add("Ajay");  
+Iterator<String> itr=al.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+# Example of Vector:
+
+import java.util.*;  
+public class TestJavaCollection3{  
+public static void main(String args[]){  
+Vector<String> v=new Vector<String>();  
+v.add("Ayush");  
+v.add("Amit");  
+v.add("Ashish");  
+v.add("Garima");  
+Iterator<String> itr=v.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+Output:
+
+Ayush
+Amit
+Ashish
+Garima
+
+
+# Example of Stack:
+
+import java.util.*;  
+public class TestJavaCollection4{  
+public static void main(String args[]){  
+Stack<String> stack = new Stack<String>();  
+stack.push("Ayush");  
+stack.push("Garvit");  
+stack.push("Amit");  
+stack.push("Ashish");  
+stack.push("Garima");  
+stack.pop();  
+Iterator<String> itr=stack.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+} 
+
+Output:
+Ayush
+Garvit
+Amit
+Ashish
+
